@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Mahshid</title>
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="css/theme.css" rel="stylesheet">
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<div class="container">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+		<i class="fa fa-bars"></i>
+		</button>
+		<!--
+		<a class="navbar-brand page-scroll" href="index.html">
+		ARIES
+		</a>-->
+	</div>
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+		<ul class="nav navbar-nav">
+			<li>
+			<a href="index.html">Home</a>
+			</li>
+			<li>
+			<a href="Music-STAR.html">Music-STAR</a>
+			</li>
+			<li>
+			<a href="resume.html">Résumé</a>
+			</li>
+			<li>
+				<a href="gallery.html">Gallery</a>
+			</li>
+			<li>
+			<a href="contact.html">Contact</a>
+			</li>
+		</ul>
+	</div>
+	<!-- /.navbar-collapse -->
+</div>
+<!-- /.container -->
+</nav>
+<!-- Intro Header -->
+<header class="intro">
+<div class="intro-body">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<h1 class="brand-heading">Music-STAR</h1>
+				<p class="intro-text">
+					A Style Translation System for Audio-based Rearrangement
+				</p>
+				<a href="#single-project" class="btn btn-circle page-scroll">
+				<i class="fa fa-angle-double-down animated"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</header>
+<!-- Project Details Section -->
+<section id="single-project">
+<div class="container content-section">
+	<div class="row">
+		<h3 class="col-lg-8 col-lg-offset-2">What is Music-STAR?</h3>
+		<div class="col-lg-8 col-lg-offset-2">
+			<p style="margin: 0px;">
+				Music Style Translation has recently gained attention among music processing studies.
+				It aims to generate variations of existing music pieces by altering the style-variant
+				characteristics of the original music piece, while content such as the melody
+				remains unchanged. These alterations involve timbre translation, reharmonization,
+				or music rearrangement. We plan to address music rearrangement,
+				focusing on instrumentation, by processing audio mixtures comprising two instrument tracks. We 
+				introduce Music-STAR, a system based on WaveNet autoencoder
+				that can transform the instruments of a multi-track piece into another set of
+				instruments, resulting in a rearranged piece. We evaluate Music-STAR on the StarNet dataset, which
+				include string-piano and vibraphone-clarinet mixtures. We also compare the performance of our model 
+				to baseline approaches performed by single-instrument music translation, and separation-translation pipeline.
+				For further information please visit the GitHub repository. 
+			</p>
+			<p>
+				<a href="https://github.com/mahshidaln/Music-STAR" class="btnghost"><i class="fa fa-github"></i> Music-STAR</a>
+				<!--<i style="font-size:12px;margin-right:3px;"> or </i> 
+				<a href="index.html#portfolio" class="btnghost"><i class="fa fa-camera"></i> Back to projects gallery</a>-->
+			</p>
+		</div>
+	</div>
+
+	<div class="row" style="margin-top: 40px;">
+		<h3 class="col-lg-8 col-lg-offset-2">Content</h3>
+		<div class="col-lg-8 col-lg-offset-2">
+			<ol>
+				<li>
+					<a href="#dataset">Dataset Examples</a>
+				</li>
+				<li>
+					<a href="#single">Single-instrument Rearrangement</a>
+				</li>
+				<li>
+					<a href="#pipeline">Seperation-Translation Pipeline</a>
+				</li>
+				<li>
+					<a href="#unsup">Unsupervised Music-STAR</a>
+				</li>
+				<li>
+					<a href="#sup">Supervised Music-STAR</a>
+				</li>
+				<ol>
+					<li>
+						<a href="#one">1st Configuration</a>
+					</li>
+					<li>
+						<a href="#two">2nd Configuration</a>
+					</li>
+					<li>
+						<a href="#three">3rd Configuration</a>
+					</li>
+				</ol>
+			</ol>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="gallery">
+			<ul>
+				<li class="col-md-3">
+					<img style="height: 200px;" src="img/string.png" alt="String Instruments" title="String Instruments">
+				</li>
+				<li class="col-md-3">
+					<img style=" height: 200px;" src="img/piano.png" alt="Piano" title="Piano">
+				</li>
+				<li class="col-md-3">
+					<img style=" height: 200px;" src="img/clarinet.jpeg" alt="Clarinet" title="Clarinet">
+				</li>
+				<li class="col-md-3">
+					<img style=" height: 200px;" src="img/vibra.png" alt="Vibraphone" title="Vibraphone">
+				</li>
+		</div>
+	</div>
+
+	<div class="row" style="margin-top: 40px;">
+		<div class="col-lg-9 col-lg-offset-2">
+			<h3 id="dataset">Dataset Examples</h3>
+			<p>
+				The following table includes some random samples from the MusicNet dataset, demosntrating five music pieces performed by string-piano and clarinet-vibraphone combinations.
+			</p>
+			<table class="audio-table">
+				<thead>
+					<tr>
+						<th> String </th>
+						<th> Piano </th>
+						<th> String-Piano</th>
+						<th> Clarinet </th>
+						<th> Vibraphone </th>
+						<th> Clarinet-Vibraphone</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="row" style="margin-top: 40px;">
+		<div class="col-lg-9 col-lg-offset-2">
+			<h3 id="single">Single-Instrument Translation</h3>
+			<p>
+				The following table includes the results obtained by applying single-instrument translation and then mixing the outputs.
+			</p>
+			<table class="audio-table">
+				<thead>
+					<tr>
+						<th> Input 1 </th>
+						<th> Input 2 </th>
+						<th> Target 1 </th>
+						<th> Target 2 </th>
+						<th> Target Sum </th>
+						<th> Gold Standard </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="row" style="margin-top: 40px;">
+		<div class=" col-lg-offset-2">
+			<h3 id="pipeline">Separation-Translation Pipeline</h3>
+			<p>
+				The following table includes the results obtained by applying the separation-translation pipeline and then mixing the outputs.
+			</p>
+			<table class="audio-table">
+				<thead>
+					<tr>
+						<th> Input Mixture </th>
+						<th> Separated 1 </th>
+						<th> Separated 2 </th>
+						<th> Target 1 </th>
+						<th> Target 2 </th>
+						<th> Target Sum </th>
+						<th> Gold Standard </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="row" style="margin-top: 40px;">
+		<div class="col-lg-9 col-lg-offset-2">
+			<h3 id="unsup">Unsupervised Music-STAR</h3>
+			<p>
+				The following table includes the results obtained by applying unsupervised Music-STAR and then mixing the outputs.
+			</p>
+			<table class="audio-table">
+				<thead>
+					<tr>
+						<th> Input Mixture </th>
+						<th> Target 1 </th>
+						<th> Target 2 </th>
+						<th> Target Sum </th>
+						<th> Gold Standard </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="row" style="margin-top: 40px;">
+		<div class="col-lg-9 col-lg-offset-2">
+			<h3 id="sup">Supervised Music-STAR</h3>
+			<p>
+				The following tables includes the results obtained by applying the three configurations of supervised Music-STAR.
+			</p>
+			<h4 id="one">1st Configuration</h4>
+			<table class="audio-table" style="margin-bottom: 40px;">
+				<thead>
+					<tr>
+						<th> Input Mixture </th>
+						<th> Target 1 </th>
+						<th> Target 2 </th>
+						<th> Target Sum </th>
+						<th> Gold Standard </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+				</tbody>
+			</table>
+
+			<h4 id="two">2nd Configuration</h4>
+			<table class="audio-table" style="margin-bottom: 40px;">
+				<thead>
+					<tr>
+						<th> Input Mixture </th>
+						<th> Target 1 </th>
+						<th> Target 2 </th>
+						<th> Target Sum </th>
+						<th> Gold Standard </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+				</tbody>
+			</table>
+
+			<h4 id="two">3rd Configuration</h4>
+			<table class="audio-table" style="margin-bottom: 40px;">
+				<thead>
+					<tr>
+						<th> Input Mixture </th>
+						<th> Target Mixture </th>
+						<th> Gold Standard </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+						<td>
+							<audio src="https://adasp.telecom-paris.fr/rc-ext/demos_companion-pages/vqvae_examples/synth/content/e2682f025cfcd5c6588a39b6656e0914.content.mp3" controls=""></audio>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+					<tr></tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container text-center">
+	<p class="credits">
+		Copyright &copy; 2021 Mahshid Alinoori. All Rights Reserved.<br/>
+		"Aries" Template by WowThemes.net
+	</p>
+</div>
+</footer>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="js/theme.js"></script>
+</body>
+</html>
