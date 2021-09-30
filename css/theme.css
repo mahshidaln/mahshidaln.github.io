@@ -483,7 +483,7 @@ table td {
       border: 1px solid #e9ebec; }
 
 table.audio-table td {
-	vertical-align: top; }
+	vertical-align: center; }
 table.audio-table audio {
 	height: 2.5rem;
 	max-width: 11rem; }
