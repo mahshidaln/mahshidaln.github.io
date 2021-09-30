@@ -469,7 +469,7 @@ table {
 table {
 	/* display: block; */
 	width: 100%;
-	margin: 0 25px 0 25px;
+	margin: 0;
     overflow: auto;
     word-break: normal;
     word-break: keep-all;
