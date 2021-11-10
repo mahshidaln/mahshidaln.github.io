@@ -518,3 +518,9 @@ ol li{
 	font-size:18px;
 	line-height:1;
 	}
+
+.profile {
+	margin-bottom: 25px;
+	border-radius: 50%;
+	max-width: 250px;
+}
