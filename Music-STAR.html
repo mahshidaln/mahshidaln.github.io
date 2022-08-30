@@ -84,23 +84,25 @@
 		<h3 class="col-lg-10 col-lg-offset-1">What is Music-STAR?</h3>
 		<div class="col-lg-10 col-lg-offset-1">
 			<p>
-				Music Style Translation has recently gained attention among music processing studies.
-				It aims to generate variations of existing music pieces by altering the style-variant
-				characteristics of the original music piece, while content such as the melody
-				remains unchanged. These alterations involve timbre translation, reharmonization,
-				or music rearrangement. We plan to address music rearrangement,
-				focusing on instrumentation, by processing audio mixtures comprising two instrument tracks. We 
-				introduce Music-STAR, a system based on WaveNet autoencoder
-				that can transform the instruments of a multi-track piece into another set of
-				instruments, resulting in a rearranged piece. We evaluate Music-STAR on the StarNet dataset, which
-				includes string-piano and vibraphone-clarinet mixtures. We also compare the performance of our model 
-				to baseline approaches performed by single-instrument music translation, and separation-translation pipeline.
+				Music style translation aims to generate variations of existing pieces of music by altering the
+				style-related characteristics of the original piece while content, such as the melody, remains 
+				unchanged. These alterations could involve timbre translation, re-harmonization, or music 
+				rearrangement. Previous studies have achieved promising results utilizing time-frequency and 
+				symbolic music representations. Music style translation on raw audio has also been investigated 
+				and applied to single-instrument pieces. Although processing raw audio is more challenging, it 
+				provides richer information about timbres, dynamics, and articulations. We 
+				introduce Music-STAR, the first audio-based translation system that translates the existing 
+				instruments in a piece into a set of target instruments without using source separation. 
+				To conduct our experiments, we use the StarNet dataset, which
+				includes strings-piano and vibraphone-clarinet mixtures alongside their stems. We also compare 
+				the performance of our model to baseline approaches performed by single-instrument 
+				translation and separation-translation pipelines.
 			</p>
-			<!--<p>
+			<p>
 				<a href="https://github.com/mahshidaln/Music-STAR" class="btnghost"><i class="fa fa-github"></i> Music-STAR</a>
-				<i style="font-size:12px;margin-right:3px;"> or </i> 
-				<a href="index.html#portfolio" class="btnghost"><i class="fa fa-camera"></i> Back to projects gallery</a>
-			</p>-->
+				<!-- <i style="font-size:12px;margin-right:3px;"> or </i>  -->
+				<a href="https://zenodo.org/record/6917099" class="btnghost"><i class="fa fa-file-audio-o"></i> StarNet</a>
+			</p>
 		</div>
 	</div>
 
@@ -112,25 +114,38 @@
 					<a href="#dataset">Dataset Examples</a>
 				</li>
 				<li>
-					<a href="#single">Single-instrument Rearrangement</a>
+					<a href="#single">Single-Instrument Pipeline</a>
 				</li>
 				<li>
 					<a href="#pipeline">Seperation-Translation Pipeline</a>
 				</li>
 				<li>
-					<a href="#unsupervised">Unsupervised Music-STAR</a>
+					<a href="#embedding">Embedding-supervised Method</a>
 				</li>
 				<li>
-					<a href="#supervised">Supervised Music-STAR</a>
+					<a href="#stem">Stem-supervised Music-STAR</a>
 				</li>
-				<ol>
-					<li>
-						<a href="#stem">Stem-supervised Music-STAR</a>
-					</li>
-					<li>
-						<a href="#mixture">Mixture-supervised Music-STAR</a>
-					</li>
-				</ol>
+				<li>
+					<a href="#mixture">Mixture-supervised Music-STAR</a>
+				</li>
+				<li>
+					<a href="#compare">Comparison</a>
+				</li>
+				<li>
+					<a href="#evaluation">Evaluation</a>
+				</li>
+					<ol type="A">
+						<li>
+							<a href="#stats">Statistical Analysis on Subjective Evaluation</a>
+						</li>
+						<li>
+							<a href="#demucs">Demucs Performance Analysis</a>
+						</li>
+					</ol>
+				
+				<li>
+					More Audio Samples
+				</li>
 			</ol>
 		</div>
 	</div>
@@ -159,7 +174,7 @@
 		<h3 id="dataset" class="col-lg-10 col-lg-offset-1">Dataset Examples</h3>
 		<div class="col-lg-10 col-lg-offset-1">
 			<p>
-				The following tables include some random samples both from the StarNet dataset and some famous songs, demosntrating ten music pieces performed by string-piano and clarinet-vibraphone combinations.
+				The following tables include some random samples both from the StarNet dataset and some famous songs, demosntrating ten music pieces performed by strings-piano and clarinet-vibraphone combinations.
 			</p>
 			<table class="audio-table">
 				<thead>
@@ -170,7 +185,7 @@
 						<th> Clarinet-Vibraphone</th>
 						<th> String </th>
 						<th> Piano </th>
-						<th> String-Piano</th>
+						<th> Strings-Piano</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -426,7 +441,7 @@
 				The following tables include the results obtained by applying single-instrument translation and then mixing the outputs.
 			</p>
 			<p style="margin-left: 25px; font-size: 18px;">
-				Clarinet-Vibraphone to String-Piano:
+				Clarinet-Vibraphone to Strings-Piano:
 			</p>
 
 			<table class="audio-table" style="margin-bottom: 40px;">
@@ -686,7 +701,7 @@
 			</table>
 
 			<p style="margin-left: 25px; font-size: 18px;">
-				String-Piano to Clarinet-Vibraphone:
+				Strings-Piano to Clarinet-Vibraphone:
 			</p>
 
 			<table class="audio-table" style="margin-bottom: 40px;">
@@ -954,7 +969,7 @@
 				The following tables include the results obtained by applying the separation-translation pipeline and then mixing the outputs.
 			</p>
 			<p style="margin-left: 25px; font-size: 18px;">
-				Clarinet-Vibraphone to String-Piano:
+				Clarinet-Vibraphone to Strings-Piano:
 			</p>
 
 			<table class="audio-table" style="margin-bottom: 40px;">
@@ -1245,7 +1260,7 @@
 			</table>
 
 			<p style="margin-left: 25px; font-size: 18px;">
-				String-Piano to Clarinet-Vibraphone:
+				Strings-Piano to Clarinet-Vibraphone:
 			</p>
 
 			<table class="audio-table" style="margin-bottom: 40px;">
@@ -1538,13 +1553,13 @@
 	</div>
 
 	<div class="row" style="margin-top: 40px;">
-		<h3 class="col-lg-10 col-lg-offset-1" id="unsupervised">Unsupervised Music-STAR</h3>
+		<h3 class="col-lg-10 col-lg-offset-1" id="embedding">Embedding-supervised Method</h3>
 		<div class="col-lg-10 col-lg-offset-1">
 			<p>
-				The following tables include the results obtained by applying unsupervised Music-STAR and then mixing the outputs.
+				The following tables include the results obtained by applying the embedding-supervised method and then mixing the outputs.
 			</p>
 			<p style="margin-left: 25px; font-size: 18px;">
-				Clarinet-Vibraphone to String-Piano:
+				Clarinet-Vibraphone to Strings-Piano:
 			</p>
 
 			<table class="audio-table" style="margin-bottom: 40px;">
@@ -1773,7 +1788,7 @@
 			</table>
 
 			<p style="margin-left: 25px; font-size: 18px;">
-				String-Piano to Clarinet-Vibraphone:
+				Strings-Piano to Clarinet-Vibraphone:
 			</p>
 
 			<table class="audio-table" style="margin-bottom: 40px;">
@@ -2004,14 +2019,13 @@
 	</div>	
 
 	<div class="row" style="margin-top: 40px;">
-		<h3 class="col-lg-10 col-lg-offset-1" id="supervised">Supervised Music-STAR</h3>
+		<h3 class="col-lg-10 col-lg-offset-1" id="stem">Stem-supervided Music-STAR</h3>
 		<div class="col-lg-10 col-lg-offset-1">
 			<p>
-				The following tables include the results obtained by applying the two approaches of supervised Music-STAR, stem-supervised and mixture-supervised.
+				The following tables include the results obtained by applying stem-supervised Music-STAR.
 			</p>
-			<h4 id="stem">Stem-supervided Music-STAR</h4>
 			<p style="margin-left: 25px; font-size: 18px;">
-				Clarinet-Vibraphone to String-Piano:
+				Clarinet-Vibraphone to Strings-Piano:
 			</p>
 
 			<table class="audio-table" style="margin-bottom: 40px;">
@@ -2240,7 +2254,7 @@
 			</table>
 
 			<p style="margin-left: 25px; font-size: 18px;">
-				String-Piano to Clarinet-Vibraphone:
+				Strings-Piano to Clarinet-Vibraphone:
 			</p>
 
 			<table class="audio-table" style="margin-bottom: 40px;">
@@ -2467,13 +2481,18 @@
 					</tr>
 				</tbody>
 			</table>
+		</div>
+	</div>	
 
-
-
-			<h4 id="mixture">Mixture-supervised Music-STAR</h4>
+	<div class="row" style="margin-top: 40px;">
+		<h3 class="col-lg-10 col-lg-offset-1" id="mixture">Mixture-supervided Music-STAR</h3>
+		<div class="col-lg-10 col-lg-offset-1">
+			<p>
+				The following tables include the results obtained by applying mixture-supervised Music-STAR.
+			</p>
 
 			<p style="margin-left: 25px; font-size: 18px;">
-				Clarinet-Vibraphone to String-Piano:
+				Clarinet-Vibraphone to Strings-Piano:
 			</p>
 
 			<table class="audio-table" style="margin-bottom: 40px;">
@@ -2639,7 +2658,7 @@
 			</table>
 
 			<p style="margin-left: 25px; font-size: 18px;">
-				String-Piano to Clarinet-Vibraphone:
+				Strings-Piano to Clarinet-Vibraphone:
 			</p>
 
 			<table class="audio-table" style="margin-bottom: 40px;">
@@ -2808,13 +2827,13 @@
 	</div>
 
 	<div class="row" style="margin-top: 40px;">
-		<h3 class="col-lg-10 col-lg-offset-1" id="unsupervised">Comparison</h3>
+		<h3 class="col-lg-10 col-lg-offset-1" id="compare">Comparison</h3>
 		<div class="col-lg-10 col-lg-offset-1">
 			<p>
-				The following tables include the final results obtained by applying the baseline models and Music-STAR models.
+				The following tables include the final results obtained by applying all five methods.
 			</p>
 			<p style="margin-left: 25px; font-size: 18px;">
-				Clarinet-Vibraphone to String-Piano:
+				Clarinet-Vibraphone to Strings-Piano:
 			</p>
 
 			<table class="audio-table" style="margin-bottom: 40px;">
@@ -2823,7 +2842,7 @@
 						<th> Name </th>
 						<th> Single-Instrument </th>
 						<th> Separation-Translation </th>
-						<th> Unsupervised <br> Music-STAR </th>
+						<th> Embedding-supervised </th>
 						<th> Stem-supervised <br> Music-STAR </th>
 						<th> Mixture-supervised <br> Music-STAR </th>
 					</tr>
@@ -3043,7 +3062,7 @@
 			</table>
 
 			<p style="margin-left: 25px; font-size: 18px;">
-				String-Piano to Clarinet-Vibraphone:
+				Strings-Piano to Clarinet-Vibraphone:
 			</p>
 
 			<table class="audio-table" style="margin-bottom: 40px;">
@@ -3052,7 +3071,7 @@
 						<th> Name </th>
 						<th> Single-Instrument </th>
 						<th> Separation-Translation </th>
-						<th> Unsupervised <br> Music-STAR </th>
+						<th> Embeddin <br> Music-STAR </th>
 						<th> Stem-supervised <br> Music-STAR </th>
 						<th> Mixture-supervised <br> Music-STAR </th>
 					</tr>
@@ -3273,13 +3292,171 @@
 		</div>
 	</div>
 
+
+	<div class="row" style="margin-top: 40px;">
+		<h3 class="col-lg-10 col-lg-offset-1" id="evaluation">Evaluation</h3>
+		<div class="col-lg-10 col-lg-offset-1">
+			<h4 id="stats">A. Statistical Analysis on Subjective Evaluation</h4>
+			<p>
+				Below you can see the results of subjective evaluation as bar charts. Each method was ranked by the 
+				participants from 1 to 5 (1 being the best) in terms of content preservation, style fit, and audio quality.
+			</p>
+			<h5 style="text-align: center;">Content preservation</h5>
+			<div class="row">
+				<div class="gallary">
+					<ul style="list-style: none;">
+						<li class="col-md-6">
+							<img  src="img/sp-content.png" title="ps-content">
+						</li>
+						<li class="col-md-6">
+							<img  src="img/cv-content.png" title="cv-content">
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<h5 style="text-align: center;">Style fit</h5>
+			<div class="row">
+				<div class="gallary">
+					<ul style="list-style: none;">
+						<li class="col-md-6">
+							<img  src="img/sp-style.png" title="ps-content">
+						</li>
+						<li class="col-md-6">
+							<img  src="img/cv-style.png" title="cv-content">
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<h5 style="text-align: center;">Audio quality</h5>
+			<div class="row">
+				<div class="gallary">
+					<ul style="list-style: none;">
+						<li class="col-md-6">
+							<img  src="img/sp-quality.png" title="ps-content">
+						</li>
+						<li class="col-md-6">
+							<img  src="img/cv-quality.png" title="cv-content">
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<h4 id="demucs">B. Demucs Performance Analysis</h4>
+			<div class="col-lg-offset-1">
+				<p>
+					The following tables shows the SDR, the metric to evaluate the performance of Demucs 
+					used for separating the stems of Strings-Piano and Clarinet-Vibraphone mixtures. The overall SDR 
+					is 7.36. You can listen to the isolated audio tracks in the <a href="#pipeline"><b>Separation-Translation Pipline</b> section</a>.
+				</p>
+		
+				<table class="audio-table">
+					<thead>
+					<tr>
+						<th rowspan="2"></th>
+						<th colspan="2">Clarinet-Vibraphone</th>
+						<th colspan="2">Strings-Piano</th>
+					</tr>
+					<tr>
+						<th>Clarinet</th>
+						<th>Vibraphone</th>
+						<th>Strings</th>
+						<th>Piano</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Pirates of Caribbean Theme</td>
+						<td>9.210</td>
+						<td>4.523</td>
+						<td>6.722</td>
+						<td>3.117</td>
+					</tr>
+					<tr>
+						<td>My Heart Will Go on</td>
+						<td>7.081</td>
+						<td>8.698</td>
+						<td>3.439</td>
+						<td>4.223</td>
+					</tr>
+					<tr>
+						<td>Beethoven's String</td>
+						<td>10.423</td>
+						<td>4.815</td>
+						<td>8.649</td>
+						<td>3.896</td>
+					</tr>
+					<tr>
+						<td>Moonlight Sonata</td>
+						<td>9.015</td>
+						<td>10.227</td>
+						<td>11.048</td>
+						<td>8.953</td>
+					</tr>
+					<tr>
+						<td>Fur Elise</td>
+						<td>3.647</td>
+						<td>3.529</td>
+						<td>3.672</td>
+						<td>3.101</td>
+					</tr>
+					<tr>
+						<td>Brahms's Clarinet</td>
+						<td>10.071</td>
+						<td>8.622</td>
+						<td>3.053</td>
+						<td>12.397</td>
+					</tr>
+					<tr>
+						<td>Beethoven's Piano</td>
+						<td>8.906</td>
+						<td>14.570</td>
+						<td>5.271</td>
+						<td>8.280</td>
+					</tr>
+					<tr>
+						<td>Dvorak's String</td>
+						<td>7.880</td>
+						<td>10.780</td>
+						<td>5.228</td>
+						<td>8.231</td>
+					</tr>
+					<tr>
+						<td>Romeo and Juliet</td>
+						<td>5.831</td>
+						<td>6.675</td>
+						<td>0.529</td>
+						<td>6.929</td>
+					</tr>
+					<tr>
+						<td>Nuvole Blanche</td>
+						<td>16.948</td>
+						<td>12.318</td>
+						<td>8.370</td>
+						<td>5.600</td>
+					</tr>
+					<tr>
+						<td><b>Average SDR</b></td>
+						<td><b>8.901</b></td>
+						<td><b>8.476</b></td>
+						<td><b>5.598</b></td>
+						<td><b>6.473</b></td>
+					</tr>
+					</tbody>
+					</table>
+			</div>
+		</div>
+	</div>
+
+
 </div>
 </section>
 <!-- Footer -->
 <footer>
 <div class="container text-center">
 	<p class="credits">
-		Copyright &copy; 2021 Mahshid Alinoori. All Rights Reserved.
+		Copyright &copy; 2022 Mahshid Alinoori. All Rights Reserved.
 	</p>
 </div>
 </footer>
